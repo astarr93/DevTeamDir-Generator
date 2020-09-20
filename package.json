@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/astarr93/DevTeamDir-Generator#readme",
   "dependencies": {
+    "fidget": "^0.4.9",
     "inquirer": "^7.3.3"
   }
 }
