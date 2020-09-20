@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/astarr93/DevTeamDir-Generator/issues"
   },
-  "homepage": "https://github.com/astarr93/DevTeamDir-Generator#readme"
+  "homepage": "https://github.com/astarr93/DevTeamDir-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
 }
