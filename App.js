@@ -4,8 +4,8 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const questions = require('./utils/questions');
-const startMsg = "Create a simple HTML webpage featuring your Team Directory. Answer the questions below about your squad to get started: "
-const endMsg = "Check your downloads folder for your file."
+const startMsg = "Create a simple HTML webpage featuring your Team Directory. \nAnswer the questions below about your squad to get started: \n";
+const endMsg = "Check your downloads folder for your file.";
 
 figlet('Dev Team Summary', function (err, data) {
     if (err) {
