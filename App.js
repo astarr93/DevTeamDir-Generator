@@ -15,8 +15,8 @@ figlet('Dev Team Summary', function (err, data) {
     }
     // node.js inquirer package collects user response
     inquirer.prompt(questions).then(answers => {
-        const filePath = './output/team.html';
+        let filePath = './output/team.html';
         fs.writeFileSync(filePath, answers);
         console.log(endMsg);
     })
-})
+});
