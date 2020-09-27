@@ -1,4 +1,7 @@
 const Engineer = require("../lib/Engineer");
+const Employee = require("../lib/Engineer");
+const Intern = require("../lib/Engineer");
+const Manager = require("../lib/Engineer");
 
 const questions = [{
     type: "input",

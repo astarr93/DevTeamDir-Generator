@@ -13,10 +13,10 @@ figlet('Dev Team Summary', function (err, data) {
     else {
         console.log(`${data}\n${startMsg}`);
     }
-    // node.js inquirer package collects user response
+    // node.js inquirer package collects user response, generates output
     inquirer.prompt(questions).then(answers => {
         let filePath = './output/team.html';
-        fs.writeFileSync(filePath, answers);
-        console.log(endMsg);
+        // fs.writeFileSync(filePath, answers);
+        // console.log(endMsg);
     })
 });
