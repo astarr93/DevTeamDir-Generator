@@ -6,6 +6,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const questions = require('./lib/Questions');
+const startingQuestions = questions.inital;
 const startMsg = "Create a simple HTML webpage featuring your Team Directory.\n \nAnswer the questions below about your squad to get started: \n";
 const endMsg = "Check the repository's output folder for your file.";
 const OUTPUT_DIR = path.resolve(__dirname, "output");
@@ -21,7 +22,7 @@ figlet('Dev Team Summary', function (err, data) {
         console.log(`${data}\n${startMsg}`);
     }
     // node.js inquirer package collects user response, generates output
-    inquirer.prompt(questions).then(answers => {
+    inquirer.prompt(questions.inital).then(answers => {
         fs.writeFileSync(outputPath, answers);
         console.log(endMsg);
     })
