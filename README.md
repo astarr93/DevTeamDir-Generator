@@ -27,13 +27,22 @@ Clone the repo :)
 # Usage  
 
 
-Use a terminal to run node.js inside the cloned repo. Answer the prompts in the terminal as the appear. When finished, the app will output your stylish HTML page in your download folder.  
+Use a terminal to run node.js inside the cloned repo. Answer the prompts in the terminal as the appear. When finished, the app will output your stylish HTML page in the repo's output folder. 
 
+![image](https://user-images.githubusercontent.com/47404581/95309252-e65e0e00-0858-11eb-82e5-5a34a06ef921.png)
 
 # Testing  
 
 
-No testing information is available at this time.  
+Testing was completed using the Node.js package, Jest.
+
+In the terminal, run
+
+```
+npm run test
+```
+
+to test the app using the scripts in the test folder. Confirmed all test have passed as of 10/7/2020.
 
 
 # License  
