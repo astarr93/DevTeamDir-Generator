@@ -27,7 +27,7 @@ Clone the repo :)
 # Usage  
 
 
-Use a terminal to run node.js inside the cloned repo. Answer the prompts in the terminal as the appear. When finished, the app will output your stylish HTML page in your download folder.  
+Use a terminal to run node.js inside the cloned repo. Answer the prompts in the terminal as the appear. When finished, the app will output your stylish HTML page in the repo's output folder. 
 
 ![image](https://user-images.githubusercontent.com/47404581/95309252-e65e0e00-0858-11eb-82e5-5a34a06ef921.png)
 
