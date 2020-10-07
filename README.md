@@ -34,7 +34,15 @@ Use a terminal to run node.js inside the cloned repo. Answer the prompts in the 
 # Testing  
 
 
-No testing information is available at this time.  
+Testing was completed using the Node.js package, Jest.
+
+In the terminal, run
+
+```
+npm run test
+```
+
+to test the app using the scripts in the test folder. Confirmed all test have passed as of 10/7/2020.
 
 
 # License  
