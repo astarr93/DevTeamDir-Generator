@@ -5,7 +5,7 @@ const questions = [{
 },
 {
     type: "input",
-    name: "pid",
+    name: "id",
     message: "What is the employee's personnel identification number: "
 },
 {

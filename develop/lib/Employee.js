@@ -1,23 +1,23 @@
 class Employee {
-    constructor(name, email, pid, role) {
+    constructor(name, id, email, role) {
         this.name = name;
-        this.email = email;
         // Personnel Indentification Number. Must be Unique!
-        this.pid = pid;
+        this.id = id;
+        this.email = email;
         this.role = role;
     };
 
     getName() {
         return this.name;
     }
+    getId() {
+        return this.id;
+    }
     getEmail() {
         return this.email;
     }
-    getId() {
-        return this.pid;
-    }
     getRole() {
-        return this.role;
+        return "Employee";
     }
 };
 
