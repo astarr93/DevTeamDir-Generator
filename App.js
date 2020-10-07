@@ -12,32 +12,37 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 const { createInflate } = require('zlib');
+const Employee = require('./lib/Employee');
+const employees = [];
 
-// ASCCII Art module to write title and start application
-figlet('Dev Team Summary', function (err, data) {
-    if (err) {
-        console.log(err1);
-    }
-    else {
-        console.log(`\n${data}\n${startMsg}`);
-    }
-    startApp();
-});
+startApp();
 
 function startApp() {
-    const employees = [];
+
+    // ASCCII Art module to write title and start application
+    figlet('Dev Team Summary', function (err, data) {
+        if (err) {
+            console.log(err1);
+        }
+        else {
+            console.log(`\n${data}\n${startMsg}`);
+        }
+    });
 
     // node inquirer package collects user response, generates output
     getInfo();
 
     function getInfo() {
         inquirer.prompt(questions).then(answers => {
-            // console.log(Object.keys(answers)); 
-            addPerson(answers);
-            if (answers.hasMore !== false) {
-                getInfo();
-            }
-            managerCheck();
+            console.log(Object.keys(answers));
+            let objClone = Object.assign(answers);
+            let e = new Employee({ ...objClone });
+            console.log(e);
+            // addPerson(answers);
+            // if (answers.hasMore !== false) {
+            //     getInfo();
+            // }
+            // managerCheck();
         });
     };
 
