@@ -3,7 +3,7 @@ class Employee {
         this.name = name;
         this.email = email;
         // Personnel Indentification Number. Must be Unique!
-        this.pid = pid; 
+        this.pid = pid;
         this.role = role;
     };
 
@@ -13,11 +13,11 @@ class Employee {
     getEmail() {
         return this.email;
     }
-    getPid() {
+    getId() {
         return this.pid;
     }
     getRole() {
-        return "Employee";
+        return this.role;
     }
 };
 
