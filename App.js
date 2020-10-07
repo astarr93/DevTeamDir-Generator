@@ -11,13 +11,12 @@ const endMsg = "Check the repository's output folder for your file.";
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
-const { createInflate } = require('zlib');
 const Employee = require('./lib/Employee');
 const employees = [];
 
-startApp();
+init();
 
-function startApp() {
+function init() {
 
     // ASCCII Art module to write title and start application
     figlet('Dev Team Summary', function (err, data) {
