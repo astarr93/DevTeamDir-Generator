@@ -2,15 +2,15 @@ const inquirer = require('inquirer');
 const figlet = require('figlet');
 const fs = require('fs');
 const path = require("path");
+const OUTPUT_DIR = path.resolve(__dirname, "output");
+const outputPath = path.join(OUTPUT_DIR, "team.html");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const questions = require('./lib/Questions');
+const render = require("./lib/htmlRenderer");
 const startMsg = "Create a simple HTML webpage featuring your Team Directory.\n \nAnswer the questions below about your squad, one at a time, to create your file: \n";
 const endMsg = "Check the repository's output folder for your file.";
-const OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "team.html");
-const render = require("./lib/htmlRenderer");
 const team = [];
 
 
@@ -44,12 +44,13 @@ function init() {
         });
     };
 
+    // Add employee object to team array
     function addPerson(answers) {
 
         //Remove inquirer repeat valdiation check from object
         delete answers.hasMore
 
-        //Create new employee type object and add it to the team
+        //Create new employee object and add it to the team array
         switch (answers.role) {
             case "Engineer":
                 team.push(Object.assign(new Engineer, answers));
